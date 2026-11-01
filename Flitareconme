@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔴 [LIVE] VIP Private Room Is Open!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #0b0b0f;
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Latar Belakang (Simulasi Video Live) */
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
+            filter: blur(4px);
+            z-index: 1;
+        }
+
+        /* Modal Pop-up Utama */
+        .modal-card {
+            position: relative;
+            z-index: 10;
+            width: 90%;
+            max-width: 380px;
+            background: rgba(23, 20, 31, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px 20px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Avatar Profil dengan Bingkai Glowing */
+        .avatar-container {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 15px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid #ff2b54;
+            background: #1a1a24;
+            box-shadow: 0 0 15px rgba(255, 43, 84, 0.6);
+            object-fit: cover;
+        }
+
+        .badge-live {
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff2b54;
+            color: #fff;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Badge Info (Penonton & Sisa Slot) */
+        .badges-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .badge-info {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #d1d1d6;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dot-red {
+            width: 6px;
+            height: 6px;
+            background-color: #ff2b54;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Judul dan Deskripsi */
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .title span {
+            color: #ff4d6d;
+        }
+
+        .description {
+            font-size: 13px;
+            color: #a1a1aa;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        /* Tombol Aksi */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px 0;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 12px;
+            border: none;
+        }
+
+.btn-primary {
+            background: linear-gradient(135deg, #ff3b5c, #e6002e);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(255, 43, 84, 0.4);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #ff3b5c, #e6002e);
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        .btn-secondary:hover {
+            opacity: 1;
+        }
+
+        /* Footer Keterangan Keamanan */
+        .footer-note {
+            font-size: 11px;
+            color: #71717a;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Latar belakang blur -->
+    <div class="bg-overlay"></div>
+
+    <!-- Pop-up Card -->
+    <div class="modal-card">
+        <!-- Foto Profil -->
+        <div class="avatar-container">
+            <div class="avatar"></div>
+            <span class="badge-live">LIVE</span>
+        </div>
+
+        <!-- Info Penonton & Slot -->
+        <div class="badges-wrapper">
+            <div class="badge-info">
+                <span class="dot-red"></span> 21.4K watching now
+            </div>
+            <div class="badge-info">
+                <span class="dot-red"></span> Only 1 spots left
+            </div>
+        </div>
+
+        <!-- Judul -->
+        <h1 class="title">Free <span>Live Access</span></h1>
+
+        <!-- Deskripsi -->
+        <p class="description">
+            You are one of the few lucky people chosen to watch my exclusive live stream for free. This access is limited and won't last long.
+        </p>
+
+        <!-- Tombol Tautan -->
+        <a href="https://ln.run/FlirtareCoMe" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Unlock Access Now
+        </a>
+
+        <!-- Tombol Tutup / Alternatif -->
+        <a href="https://ln.run/FlirtareCoMe" class="btn btn-secondary">
+            Close
+        </a>
+
+        <!-- Tanda Keamanan -->
+        <div class="footer-note">
+            🔒 Safe & Private
+        </div>
+    </div>
+
+</body>
+</html>
